@@ -1,0 +1,12 @@
+---
+- name: Install Programs
+  hosts: docker
+  tasks:
+    - apt:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - vim
+        - hollywood
+        - cowsay
+        - cmatrix
